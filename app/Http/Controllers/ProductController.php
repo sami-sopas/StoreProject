@@ -21,7 +21,7 @@ class ProductController extends Controller
     public function create()
     {
         //vista con form creacion
-        return view('Product.create');
+        return view ('Product.create');
     }
 
     /**
@@ -29,7 +29,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //valida y guardar formulario
+        //
     }
 
     /**
