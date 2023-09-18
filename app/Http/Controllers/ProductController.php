@@ -21,6 +21,7 @@ class ProductController extends Controller
     public function create()
     {
         //vista con form creacion
+        return view('Product.create');
     }
 
     /**
