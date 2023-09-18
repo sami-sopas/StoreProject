@@ -1,0 +1,5 @@
+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
+
+
+Dentro de resources y views tenemos que crear una vista c/form creción,
+en Store valida y guarda formulario
