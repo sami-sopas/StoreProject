@@ -7,19 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    CREANDO PRODUCTO CARAJO
+    CREANDO USUARIO CARAJO
 
     <br><br>
 
-    <form action="{{ route('product.store') }}" method="POST">
+    <form action="{{ route('user.store') }}" method="POST">
         @csrf
         <label for="name">Nombre</label>
         <input type="text" name="name" id="">
         
         <br><br>
 
-        <label for="category">Categoria</label>
-        <input type="text" name="category" id="">
+        <label for="email">Correo</label>
+        <input type="text" name="email" id="">
+
+        <br><br>
+
+        <label for="password">Contraseña</label>
+        <input type="text" name="password" id="">
 
         <br><br>
         <button type="submit">Enviar</button>

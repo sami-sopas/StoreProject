@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    INDEX PRODUCTO
+    INDEX USUARIO
 
     <br>
 
-    <a href="{{ route('product.create') }}">Crear producto carajo</a>
+    <a href="{{ route('user.create') }}">Crear indigena</a>
 </body>
 </html>
