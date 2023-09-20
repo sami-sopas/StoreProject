@@ -12,9 +12,3 @@
     <br>
 
     <a href="{{ route('product.index') }}">Productos</a>
-
-    <br>
-
-    <a href="{{ route('user.index') }}">Usuarios</a>
-</body>
-</html>

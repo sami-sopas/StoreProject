@@ -21,4 +21,3 @@ Route::get('/', function () {
 
 Route::resource('product',ProductController::class);
 
-Route::resource('user',UserController::class);
