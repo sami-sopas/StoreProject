@@ -24,15 +24,17 @@
             <div class="divRedirects" id="divRedirect2">    
                <h2 class="headerRedirects"><a href="{{ route('product.create') }}">Crear producto carajo</a></h2>
             </div>  <!--divRedirect end-->
+            <br>
+            <div class="divLists" id="divList1">
 
             <h2 class="titleh2">Productos</h2>
-            <div class="divLists" id="divList1">
                 @foreach ($products as $product)
-                    <div class="productDiv">
+                    <div class="divProducts">
                         Nombre producto: <a href="{{ route('product.show',$product) }}">{{$product->name}} </a> <br>
                         Categoria producto:{{$product->category}}
                         <br><br>
                     </div>  <!--productDiv end-->
+                    <br>
                     @endforeach
             </div>  <!--divList end-->
         </div>  <!--divMain end-->
