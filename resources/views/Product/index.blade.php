@@ -20,7 +20,7 @@
 
     <main>
         <div class="divMains" id="divMainIndexP">
-
+            <br>
             <div class="divRedirects" id="divRedirect2">    
                <h2 class="headerRedirects"><a href="{{ route('product.create') }}">Crear producto carajo</a></h2>
             </div>  <!--divRedirect end-->
@@ -37,6 +37,7 @@
                     <br>
                     @endforeach
             </div>  <!--divList end-->
+            <br>
         </div>  <!--divMain end-->
     </main>
 </body>

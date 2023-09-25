@@ -8,12 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="divHeaders" id="divHeaderCreateP">
-        <h1 class="headerH1">CREANDO PRODUCTO CARAJO</h1>
-    </div>
+    <header>
+        <div class="divHeaders" id="divHeaderCreateP">
+            <div class="divHeaderTitles" id="divHeaderTitle2">
+                <h1 class="headerH1">CREAR PRODUCTO</h1>
+            </div><!--divHeaderTitle end-->
+        </div>  <!--divHeader end-->
+    </header>
 
     <main>
+        <br>
         <div class="divMains" id="divMainCreateP">
+            <br>
             <!--Redirección hacia otras páginas-->
             <div class="divRedirects" id="divRedirectP">
                 <h2 class="headerRedirects"><a href="{{ route('product.index') }}">Ver lista de Productos</a></h2>
@@ -41,7 +47,7 @@
                 </form>
             </div>  <!--divForm end-->
 
-
+            <br>
         </div>  <!--divMains end-->
     </main>
 </body>
