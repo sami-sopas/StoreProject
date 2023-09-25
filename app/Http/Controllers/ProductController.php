@@ -44,6 +44,8 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
+
+     //Aunque recibe un ID, aqui lo que hace es encontrar todo al objeto
     public function show(Product $product)
     {
         return view('Product.show',compact('product'));
@@ -54,7 +56,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('Product.edit',compact('product'));
     }
 
     /**

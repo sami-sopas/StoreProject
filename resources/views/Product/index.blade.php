@@ -17,28 +17,28 @@
     </header>
 
             <br>
-
     <main>
-        <div class="divMains" id="divMainIndexP">
-            <br>
-            <div class="divRedirects" id="divRedirect2">    
-               <h2 class="headerRedirects"><a href="{{ route('product.create') }}">Crear producto carajo</a></h2>
-            </div>  <!--divRedirect end-->
-            <br>
-            <div class="divLists" id="divList1">
-
-            <h2 class="titleh2">Productos</h2>
-                @foreach ($products as $product)
-                    <div class="divProducts">
-                        Nombre producto: <a href="{{ route('product.show',$product) }}">{{$product->name}} </a> <br>
-                        Categoria producto:{{$product->category}}
-                        <br><br>
-                    </div>  <!--productDiv end-->
-                    <br>
-                    @endforeach
-            </div>  <!--divList end-->
-            <br>
-        </div>  <!--divMain end-->
-    </main>
+        <main>
+            <div class="divMains" id="divMainIndexP">
+                <br>
+                <div class="divRedirects" id="divRedirect2">    
+                   <h2 class="headerRedirects"><a href="{{ route('product.create') }}">Crear producto carajo</a></h2>
+                </div>  <!--divRedirect end-->
+                <br>
+                <div class="divLists" id="divList1">
+    
+                <h2 class="titleh2">Productos</h2>
+                    @foreach ($products as $product)
+                        <div class="divProducts">
+                            Nombre producto: <a href="{{ route('product.show',$product->id) }}">{{$product->name}} </a> <br>
+                            Categoria producto:{{$product->category}}
+                            <br><br>
+                        </div>  <!--productDiv end-->
+                        <br>
+                        @endforeach
+                </div>  <!--divList end-->
+                <br>
+            </div>  <!--divMain end-->
+        </main>
 </body>
 </html>
