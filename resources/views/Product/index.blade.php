@@ -30,7 +30,7 @@
                 <h2 class="titleh2">Productos</h2>
                     @foreach ($products as $product)
                         <div class="divProducts">
-                            Nombre producto: <a href="{{ route('product.show',$product->id) }}">{{$product->name}} </a> <br>
+                            Nombre producto: <a href="{{ route('product.show',$product->id) }}">{{$product->name}} </a> | <a href="{{ route('product.edit',$product->id) }}">Editar</a> <br>
                             Categoria producto:{{$product->category}}
                             <br><br>
                         </div>  <!--productDiv end-->
