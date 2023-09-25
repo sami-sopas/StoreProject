@@ -16,7 +16,7 @@
     <h1>Productos</h1>
     @foreach ($products as $product)
         
-        Nombre producto: <a href="{{ route('product.show',$product) }}">{{$product->name}} </a> <br>
+        Nombre producto: <a href="{{ route('product.show',$product->id) }}">{{$product->name}} </a> | <a href="{{ route('product.edit',$product->id) }}">Editar</a> <br>
         Categoria producto:{{$product->category}}
         <br><br>
     @endforeach
