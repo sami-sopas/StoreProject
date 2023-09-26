@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="divHeaders" id="divHeaderShowP">
-            <div class="divHeaderTitles" id="divHeaderTitle3">
+            <div class="divHeaderTitles" id="divHeaderTitle4">
                 <h1 class="headerH1">SHOW PRODUCTO</h1>
             </div><!--divHeaderTitle end-->
         </div>  <!--divHeader end-->
@@ -18,10 +18,11 @@
     </header>
 
     <main>
-        <div class="divMains" id="divMainIndexP">
+        <div class="divMains" id="divMainShowP">
             <br>
-            <div class="divRedirects" id="divRedirect2">
-                <h2 class="headerRedirect"><a href="{{ route('product.index') }}">REGRESAR A INDEX</a></h2>
+            <div class="divRedirects" id="divRedirectPS">
+                <h2 class="headerRedirect"><a href="/">Página principal</a> &nbsp;&nbsp;   <a href="{{ route('product.index') }}">Regresar a Index</a>  &nbsp;&nbsp;    <a href="{{route('product.edit',$product->id)}}">Editar producto {{$product->name}}</a></h2>
+                <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
             </div><!--divRedirects end-->
             <br>
             <div class="divLists">

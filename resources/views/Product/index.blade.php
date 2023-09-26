@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="divHeaders" id="divHeaderIndexP">
-            <div class="divHeaderTitles" id="divHeaderTitle1">
+            <div class="divHeaderTitles" id="divHeaderTitle2">
                 <h1 class="headerH1">INDEX PRODUCTO</h1>
             </div><!--divHeaderTitle end-->
         </div>  <!--divHeader end-->
@@ -21,8 +21,9 @@
         <main>
             <div class="divMains" id="divMainIndexP">
                 <br>
-                <div class="divRedirects" id="divRedirect2">    
-                   <h2 class="headerRedirects"><a href="{{ route('product.create') }}">Crear producto carajo</a></h2>
+                <div class="divRedirects" id="divRedirectPI">    
+                   <h2 class="headerRedirects"><a href="/">Página principal</a> &nbsp;&nbsp; <a href="{{ route('product.create') }}">Crear producto carajo</a></h2>
+                   <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
                 </div>  <!--divRedirect end-->
                 <br>
                 <div class="divLists" id="divList1">

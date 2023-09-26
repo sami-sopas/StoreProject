@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="divHeaders" id="divHeaderCreateP">
-            <div class="divHeaderTitles" id="divHeaderTitle2">
+            <div class="divHeaderTitles" id="divHeaderTitle3">
                 <h1 class="headerH1">CREAR PRODUCTO</h1>
             </div><!--divHeaderTitle end-->
         </div>  <!--divHeader end-->
@@ -21,9 +21,10 @@
         <div class="divMains" id="divMainCreateP">
             <br>
             <!--Redirección hacia otras páginas-->
-            <div class="divRedirects" id="divRedirectP">
-                <h2 class="headerRedirects"><a href="{{ route('product.index') }}">Ver lista de Productos</a></h2>
-             </div>     <!--divRedirect end-->
+            <div class="divRedirects" id="divRedirectPC">
+                <h2 class="headerRedirects"><a href="/">Página principal</a>    &nbsp;&nbsp;   <a href="{{ route('product.index') }}">Ver lista de Productos</a></h2>
+                <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
+            </div>     <!--divRedirect end-->
 
             <!-- Titulo de la forma o algo así, centrado-->
             <div class="divForms" id="divFormP">
