@@ -15,10 +15,8 @@
             </div><!--divHeaderTitle end-->
         </div>  <!--divHeader end-->
     </header>
-
             <br>
     <main>
-        <main>
             <div class="divMains" id="divMainIndexP">
                 <br>
                 <div class="divRedirects" id="divRedirectPI">    
