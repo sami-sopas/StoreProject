@@ -41,7 +41,7 @@
                         </label>
                     </div>  <!--divInput end-->
                         <br>
-                    <div class="divButtons" id="divButtonP3">
+                    <div class="divButtons" id="divButtonP1">
                         <button type="submit">Enviar</button>
                     </div>  <!--divButton end-->
                 </form>
