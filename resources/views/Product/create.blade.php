@@ -26,19 +26,30 @@
                 <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
             </div>     <!--divRedirect end-->
 
+            
+            @if ($errors->any())
+            <div>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li> <br>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
             <!-- Titulo de la forma o algo así, centrado-->
             <div class="divForms" id="divFormP">
                 <form action="{{ route('product.store') }}" method="POST">
                     @csrf
                     <div class="divInputs" id="divInputP1">
                         <label for="name">Nombre
-                        <input type="text" name="name" id="">
+                        <input type="text" name="name" id="" value="{{ old('name') }}">
                         </label>
                     </div>  <!--divInput end-->
                         <br>
                     <div class="divInputs" id="divInputP2">
                         <label for="category">Categoria
-                        <input type="text" name="category" id="">
+                        <input type="text" name="category" id="" value="{{ old('category') }}">
                         </label>
                     </div>  <!--divInput end-->
                         <br>

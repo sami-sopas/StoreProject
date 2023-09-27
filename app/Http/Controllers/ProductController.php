@@ -32,6 +32,11 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        $product = $request->validate([
+            'name' => 'required',
+            'category' => 'required'
+        ]);
+
         $product = new Product();
         $product->name = $request->name;
         $product->category = $request->category;
@@ -64,7 +69,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->name = $request->name;
+        $product->category = $request->category;
+
+        $product->save();
+
+        return redirect()->route('product.index');
+        //$product = Product::find($data->id);
     }
 
     /**
@@ -73,5 +84,7 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+        $product->delete();
+        return redirect()->route('product.index'); 
     }
 }

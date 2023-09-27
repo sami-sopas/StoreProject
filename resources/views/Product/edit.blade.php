@@ -28,8 +28,10 @@
 
             <!-- Titulo de la forma o algo así, centrado-->
             <div class="divForms" id="divFormPE">
-                <form action="{{ route('product.store') }}" method="POST">
+                <form action="{{ route('product.update',$product) }}" method="POST">
                     @csrf
+                    @method('PATCH')
+
                     <div class="divInputs" id="divInputPE1">
                         <label for="name">Nombre
                         <input type="text" name="name" id="" value="{{$product->name}}">
