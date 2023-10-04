@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/plantilla', function () {
+    return view('prueba');
+});
+
+
 //Route::get('product/pdf',[ProductController::class,'pdf'])->name('product.pdf'); crear nuestra propia ruta
 Route::resource('product',ProductController::class);
 

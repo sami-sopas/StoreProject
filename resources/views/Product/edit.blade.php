@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,9 @@
             <div class="divHeaderTitles" id="divHeaderTitle5">
                 <h1 class="headerH1">EDITAR PRODUCTO</h1>
             </div><!--divHeaderTitle end-->
-        </div>  <!--divHeader end-->
-    </header>
-
+        </div>  <!--divHeader end
+    </header>-->
+    <x-mi-layout>
     <main>
         <br>
         <div class="divMains" id="divMainEditP">
@@ -53,10 +53,11 @@
             <br>
         </div>  <!--divMains end-->
     </main>
-</body>
+</x-mi-layout>
+<!--</body>
 </html>
 
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div class="divHeaders" id="divHeaderIndexP">
-            <div class="divHeaderTitles" id="divHeaderTitle2">
-                <h1 class="headerH1">INDEX PRODUCTO</h1>
-            </div><!--divHeaderTitle end-->
-        </div>  <!--divHeader end-->
-    </header>
-            <br>
+<x-mi-layout>
     <main>
             <div class="divMains" id="divMainIndexP">
                 <br>
@@ -46,5 +29,4 @@
                 <br>
             </div>  <!--divMain end-->
         </main>
-</body>
-</html>
+</x-mi-layout>

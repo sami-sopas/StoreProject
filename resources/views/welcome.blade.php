@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
     <title>Document</title>
 </head>
-<body>
+<body>-->
+<x-mi-layout>
     <header>
         <div class="divHeaders" id="divHeaderW">
             <div class="divHeaderTitles" id="divHeaderTitle1">
@@ -28,4 +29,5 @@
             <br>
         </div><!--divMain end-->
 </main>
-</body>
+</x-mi-layout>
+<!--</body>-->
