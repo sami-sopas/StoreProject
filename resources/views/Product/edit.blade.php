@@ -22,7 +22,7 @@
             <br>
             <!--Redirección hacia otras páginas-->
             <div class="divRedirects" id="divRedirectPE">
-                <h2 class="headerRedirects"><a href="/">Página principal</a>   &nbsp;&nbsp;    <a href="{{ route('product.index') }}">Ver lista de Productos</a></h2>
+                <h2 class="headerRedirects" style="text-align: end"><a href="{{ route('product.index') }}">Regresar a productos</a> &nbsp;|&nbsp; <a href="{{ route('product.show',$product->id) }}">Regresar a {{$product->name}}</a></h2>
                 <!--<h2 class="headerRedirects"></h2>-->
              </div>     <!--divRedirect end-->
 
@@ -33,17 +33,36 @@
                     @method('PATCH')
 
                     <div class="divInputs" id="divInputPE1">
-                        <label for="name">Nombre
+                        <label for="name">Nombre:
                         <input type="text" name="name" id="" value="{{$product->name}}">
                         </label>
                     </div>  <!--divInput end-->
                         <br>
                     <div class="divInputs" id="divInputPE2">
-                        <label for="category">Categoria
+                        <label for="category">Categoría:
                         <input type="text" name="category" id="" value="{{$product->category}}">
                         </label>
                     </div>  <!--divInput end-->
                         <br>
+                        <div class="divInputs" id="divInputP2">
+                            <label for="price">Precio
+                            <input type="text" name="price" id="" value="{{$product->price}}">
+                            </label>
+                        </div>  <!--divInput end-->
+                            <br>
+                            <div class="divInputs" id="divInputP2">
+                                <label for="existance">Existencia
+                                <input type="text" name="existance" id="" value="{{$product->existance}}">
+                                </label>
+                            </div>  <!--divInput end-->
+                                <br>
+                        <div class="divInputs" id="divInputP2">
+                            <label for="description">Descripción
+                            <input type="text" name="description" id="" value="{{$product->description}}">
+                            </label>
+                        </div>  <!--divInput end-->
+                        <br>
+                        
                     <div class="divButtons" id="divButtonPE1">
                         <button type="submit">Enviar</button>
                     </div>  <!--divButton end-->

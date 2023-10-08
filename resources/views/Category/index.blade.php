@@ -7,20 +7,19 @@
                 </div>-->  <!--divRedirect end-->
                 <div class="divLists" id="divList1">
     
-                <h1 class="titleh2">Productos</h1>
-                <h2 style="text-align:end"><a href="{{ route('product.create') }}">Crear producto</a></h2>
+                <h1 class="titleh2">Categorías</h1>
+                <h2 style="text-align:end"><a href="{{ route('category.create') }}">Crear categoría</a></h2>
                 <br>
-                    @foreach ($products as $product)
-                        <div class="divProducts">
-                            <h2>Nombre del producto: {{$product->name}}<a href="{{ route('product.show',$product->id) }}"> <br><br>Ver detalles</a><!--<br> <a href="{{ route('product.edit',$product->id) }}">Editar</a> | --><h2>
+                    @foreach ($categories as $category)
+                        <div class="divCategories">
+                            <h2>Nombre de la categoría: {{$category->name}}<a href="{{ route('category.show',$category->id) }}"> <br><br>Ver detalles</a><h2>
                             <br>
-                            <form action="{{ route('product.destroy',$product) }}" method="POST">
+                            <form action="{{ route('category.destroy',$category) }}" method="POST">
                                 @csrf 
                                 @method('DELETE')
                                 <button type="submit">Eliminar</button>
                             </form>
                             <br>
-                            <!--Categoria producto:{{$product->category}}-->
                         </div>  <!--productDiv end-->
                         <br>
                         @endforeach

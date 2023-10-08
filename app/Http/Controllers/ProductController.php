@@ -34,12 +34,18 @@ class ProductController extends Controller
         //
         $product = $request->validate([
             'name' => 'required',
-            'category' => 'required'
+            'category' => 'required',
+            'price'=>'required',
+            'existance'=>'required',
+            'description'=>'required'
         ]);
 
         $product = new Product();
         $product->name = $request->name;
         $product->category = $request->category;
+        $product->price = $request->price;
+        $product->existance = $request->existance;
+        $product->description = $request->description;
 
         $product->save();
 
@@ -71,6 +77,9 @@ class ProductController extends Controller
     {
         $product->name = $request->name;
         $product->category = $request->category;
+        $product->price = $request->price;
+        $product->existance = $request->existance;
+        $product->description = $request->description;
 
         $product->save();
 
