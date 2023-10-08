@@ -12,7 +12,7 @@
     <header>
         <div class="divHeaders" id="divHeaderCreateP">
             <div class="divHeaderTitles" id="divHeaderTitle3">
-                <h1 class="headerH1">CREAR PRODUCTO</h1>
+                <h1 class="headerH1">Crear producto</h1>
             </div><!--divHeaderTitle end-->
         </div>  <!--divHeader end-->
     </header>
@@ -23,7 +23,7 @@
             <br>
             <!--Redirección hacia otras páginas-->
             <div class="divRedirects" id="divRedirectPC">
-                <h2 class="headerRedirects"><a href="/">Página principal</a>    &nbsp;&nbsp;   <a href="{{ route('product.index') }}">Ver lista de Productos</a></h2>
+                <h2 class="headerRedirects"><a href="/">Página principal</a>    &nbsp;|&nbsp;   <a href="{{ route('product.index') }}">Ver lista de Productos</a></h2>
                 <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
             </div>     <!--divRedirect end-->
 
@@ -54,6 +54,25 @@
                         </label>
                     </div>  <!--divInput end-->
                         <br>
+                        <div class="divInputs" id="divInputP2">
+                            <label for="price">Precio
+                            <input type="text" name="price" id="" value="{{ old('category') }}">
+                            </label>
+                        </div>  <!--divInput end-->
+                            <br>
+                            <div class="divInputs" id="divInputP2">
+                                <label for="existance">Existencia
+                                <input type="text" name="existance" id="" value="{{ old('category') }}">
+                                </label>
+                            </div>  <!--divInput end-->
+                                <br>
+                        <div class="divInputs" id="divInputP2">
+                            <label for="description">Descripción
+                            <input type="text" name="description" id="" value="{{ old('category') }}">
+                            </label>
+                        </div>  <!--divInput end-->
+                        <br>
+
                     <div class="divButtons" id="divButtonP1">
                         <button type="submit">Enviar</button>
                     </div>  <!--divButton end-->

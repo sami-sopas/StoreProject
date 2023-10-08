@@ -1,18 +1,18 @@
 <x-mi-layout>
     <main>
             <div class="divMains" id="divMainIndexP">
-                <br>
-                <div class="divRedirects" id="divRedirectPI">    
-                   <h2 class="headerRedirects"><a href="/">Página principal</a> &nbsp;&nbsp; <a href="{{ route('product.create') }}">Crear producto</a></h2>
-                   <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
-                </div>  <!--divRedirect end-->
-                <br>
+                
+                <!--<div class="divRedirects" id="divRedirectPI">    
+                   <h2 class="headerRedirects"><a href="/">Página principal</a> &nbsp;&nbsp; </h2>
+                </div>-->  <!--divRedirect end-->
                 <div class="divLists" id="divList1">
     
-                <h2 class="titleh2">Productos</h2>
+                <h1 class="titleh2">Productos</h1>
+                <h2 style="text-align:end"><a href="{{ route('product.create') }}">Crear producto</a></h2>
+                <br>
                     @foreach ($products as $product)
                         <div class="divProducts">
-                            Nombre producto: <a href="{{ route('product.show',$product->id) }}">{{$product->name}} </a> | <a href="{{ route('product.edit',$product->id) }}">Editar</a> | 
+                            <h2>Nombre del producto: {{$product->name}}<a href="{{ route('product.show',$product->id) }}"> <br><br>Ver detalles</a><!--<br> <a href="{{ route('product.edit',$product->id) }}">Editar</a> | --><h2>
                             <br>
                             <form action="{{ route('product.destroy',$product) }}" method="POST">
                                 @csrf 
@@ -20,8 +20,7 @@
                                 <button type="submit">Eliminar</button>
                             </form>
                             <br>
-                            Categoria producto:{{$product->category}}
-                            <br><br>
+                            <!--Categoria producto:{{$product->category}}-->
                         </div>  <!--productDiv end-->
                         <br>
                         @endforeach
