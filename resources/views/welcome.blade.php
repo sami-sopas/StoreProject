@@ -23,7 +23,8 @@
         <div class="divMains" id="divMainWelcome">
             <br>
             <div class="divRedirects" id="divRedirectW">
-                <h2 class="headerRedirects"><a href="{{ route('product.index') }}">Ver lista de Productos</a></h2>
+                <h2 class="headerRedirects"><a href="{{ route('product.index') }}">Ver lista de productos</a></h2>
+                <h2 class="headerRedirects"><a href="{{ route('category.index') }}">Ver lista de categorías</a></h2>
                 <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
             </div>     <!--divRedirect end-->
             <br>

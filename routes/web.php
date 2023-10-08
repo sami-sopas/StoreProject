@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,8 @@ Route::get('/plantilla', function () {
 
 //Route::get('product/pdf',[ProductController::class,'pdf'])->name('product.pdf'); crear nuestra propia ruta
 Route::resource('product',ProductController::class);
+
+Route::resource('category',CategoryController::class);
 
 Route::middleware([
     'auth:sanctum',
