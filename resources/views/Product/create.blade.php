@@ -49,26 +49,32 @@
                     </div>  <!--divInput end-->
                         <br>
                     <div class="divInputs" id="divInputP2">
+                        
                         <label for="category">Categoria
-                        <input type="text" name="category" id="" value="{{ old('category') }}">
+                            <select name="category_id" id="">
+                                <option value="" selected disabled> Seleccione categoría </option>
+                                @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
                         </label>
                     </div>  <!--divInput end-->
                         <br>
                         <div class="divInputs" id="divInputP2">
                             <label for="price">Precio
-                            <input type="text" name="price" id="" value="{{ old('category') }}">
+                            <input type="text" name="price" id="" value="{{ old('price') }}">
                             </label>
                         </div>  <!--divInput end-->
                             <br>
                             <div class="divInputs" id="divInputP2">
                                 <label for="existance">Existencia
-                                <input type="text" name="existance" id="" value="{{ old('category') }}">
+                                <input type="text" name="existance" id="" value="{{ old('existance') }}">
                                 </label>
                             </div>  <!--divInput end-->
                                 <br>
                         <div class="divInputs" id="divInputP2">
                             <label for="description">Descripción
-                            <input type="text" name="description" id="" value="{{ old('category') }}">
+                            <input type="text" name="description" id="" value="{{ old('description') }}">
                             </label>
                         </div>  <!--divInput end-->
                         <br>

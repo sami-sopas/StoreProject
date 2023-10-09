@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,10 @@ class ProductController extends Controller
     public function create()
     {
         //vista con form creacion
-        return view ('Product.create');
+
+        $categories = Category::all();
+
+        return view ('Product.create',compact('categories'));
     }
 
     /**
@@ -42,7 +46,7 @@ class ProductController extends Controller
 
         $product = new Product();
         $product->name = $request->name;
-        $product->category = $request->category;
+        $product->category_id = $request->category_id;
         $product->price = $request->price;
         $product->existance = $request->existance;
         $product->description = $request->description;
@@ -67,7 +71,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('Product.edit',compact('product'));
+        $categories = Category::all();
+
+        return view('Product.edit',compact(['product','categories']));
     }
 
     /**
@@ -76,7 +82,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $product->name = $request->name;
-        $product->category = $request->category;
+        $product->category_id = $request->category;
         $product->price = $request->price;
         $product->existance = $request->existance;
         $product->description = $request->description;

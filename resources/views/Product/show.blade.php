@@ -28,7 +28,7 @@
             <br>
             <div class="divLists">
                 <h2>Nombre del producto - {{$product->name}}</h2>
-                <h2>Categoría - {{$product->category}}</h2>
+                <h2>Categoría - {{$product->category->name}}</h2>
                 <h2>Precio - {{$product->price}}</h2>
                 <h2>Existencia - {{$product->existance}}</h2>
                 <h2>Descripción - {{$product->description}}</h2>

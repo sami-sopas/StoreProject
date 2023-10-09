@@ -23,6 +23,12 @@
   <link rel="stylesheet" href="{{ asset('star/css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('star/images/favicon.png') }}" />
+
+          <!-- Scripts -->
+          @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+          <!-- Styles -->
+          @livewireStyles
 </head>
 <body>
   <div class="container-scroller">
@@ -37,10 +43,10 @@
         </div>
         <div>
           <a class="navbar-brand brand-logo" href="index.html">
-            <img src="images/logo.svg" alt="logo" />
+            <img src="images/logo.png" alt="logo" style="width: 100px; height:auto"/>
           </a>
           <a class="navbar-brand brand-logo-mini" href="index.html">
-            <img src="images/logo-mini.svg" alt="logo" />
+            <img src="images/logo.png" alt="logo" style="width: 100px; height:auto"/>
           </a>
         </div>
       </div>
@@ -510,10 +516,10 @@
   <script src="{{ asset('star/js/dashboard.js')}}"></script>
   <script src="{{ asset('star/js/Chart.roundedBarCharts.js')}}"></script>
   <!-- End custom js for this page-->
+
+  @stack('modals')
+
+  @livewireScripts
 </body>
 
 </html>
-
-<div>
-    <!-- If you do not have a consistent goal in life, you can not live it in a consistent way. - Marcus Aurelius -->
-</div>

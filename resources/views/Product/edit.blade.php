@@ -40,7 +40,12 @@
                         <br>
                     <div class="divInputs" id="divInputPE2">
                         <label for="category">Categoría:
-                        <input type="text" name="category" id="" value="{{$product->category}}">
+                            <select name="category" id="">
+                                <option value="" selected disabled> Seleccione categoría </option>
+                                @foreach($categories as $category)
+                                    <option value="{{$category->id}}" @selected($product->category_id == $category->id)>{{ $category->name }}</option>
+                                @endforeach
+                            </select>
                         </label>
                     </div>  <!--divInput end-->
                         <br>
