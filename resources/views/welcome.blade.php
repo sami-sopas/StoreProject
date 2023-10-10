@@ -25,6 +25,9 @@
             <div class="divRedirects" id="divRedirectW">
                 <h2 class="headerRedirects"><a href="{{ route('product.index') }}">Ver lista de productos</a></h2>
                 <h2 class="headerRedirects"><a href="{{ route('category.index') }}">Ver lista de categorías</a></h2>
+                @auth    
+                <h2 class="headerRedirects"><a href="{{ route('user.index') }}">Ver listado de usuarios</a></h2>
+                @endauth
                 <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
             </div>     <!--divRedirect end-->
             <br>

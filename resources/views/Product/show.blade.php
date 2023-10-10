@@ -34,7 +34,9 @@
                 <h2>Descripción - {{$product->description}}</h2>
             </div>
             <br>
+            @auth    
             <h2><a href="{{route('product.edit',$product->id)}}">Editar {{$product->name}}</a></h2>
+            @endauth
         </div><!--divMain end-->
     </main>
 </x-mi-layout>

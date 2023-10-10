@@ -22,7 +22,9 @@
                     <h2>Descripción - {{$category->description}}</h2>
                 </div>
                 <br>
+                @auth    
                 <h2><a href="{{route('category.edit',$category->id)}}">Editar {{$category->name}}</a></h2>
+                @endauth
             </div><!--divMain end-->
         </main>
     </x-mi-layout>
