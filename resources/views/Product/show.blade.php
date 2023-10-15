@@ -20,9 +20,8 @@
 
     <main>
         <div class="divMains" id="divMainShowP">
-            <br>
             <div class="divRedirects" id="divRedirectPS">
-                <h2 class="headerRedirect"><a href="{{ route('product.index') }}">Regresar a productos</a></h2>
+                <h2 class="headerRedirect"><a href="{{ route('product.index') }}" class="btn btn-primary" role="button">Regresar a productos</a></h2>
                 <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
             </div><!--divRedirects end-->
             <br>
@@ -35,7 +34,7 @@
             </div>
             <br>
             @auth    
-            <h2><a href="{{route('product.edit',$product->id)}}">Editar {{$product->name}}</a></h2>
+            <h2><a href="{{route('product.edit',$product->id)}}" class="btn btn-info" role="button">Editar {{$product->name}} </a></h2>
             @endauth
         </div><!--divMain end-->
     </main>

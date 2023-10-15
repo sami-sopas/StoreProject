@@ -5,7 +5,7 @@
             <br>
             <!--Redirección hacia otras páginas-->
             <div class="divRedirects" id="divRedirectPE">
-                <h2 class="headerRedirects" style="text-align: end"><a href="{{ route('category.index') }}">Regresar a categorías</a> &nbsp;|&nbsp; <a href="{{ route('category.show',$category->id) }}">Regresar a {{$category->name}}</a></h2>
+                <h2 class="headerRedirects" style="text-align: end"><a href="{{ route('category.index') }}" class="btn btn-info" role="button">Regresar a categorías</a> &nbsp;|&nbsp; <a href="{{ route('category.show',$category->id) }}" class="btn btn-info" role="button"  >Regresar a {{$category->name}}</a></h2>
                 <!--<h2 class="headerRedirects"></h2>-->
              </div>     <!--divRedirect end-->
 
@@ -29,7 +29,7 @@
                         <br>
                         
                     <div class="divButtons" id="divButtonPE1">
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="btn btn-danger">Enviar</button>
                     </div>  <!--divButton end-->
                 </form>
             </div>  <!--divForm end-->
