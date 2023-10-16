@@ -11,6 +11,15 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+     //Pedir a todos los metodos que deben estar autenticad
+    // public function __construct()
+    // {   
+    //     $this->middleware('auth')->except(['create']);
+
+            // o $this->middleware('auth')->only(['index','show']) etc..
+    // }
+
     public function index()
     {
         $products = Product::all();

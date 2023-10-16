@@ -17,18 +17,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/plantilla', function () {
     return view('prueba');
 });
 
+//Para agrupar los middlewares
+// Route::middleware('auth')->group(function(){
+
+// })
+
 
 //Route::get('product/pdf',[ProductController::class,'pdf'])->name('product.pdf'); crear nuestra propia ruta
 Route::resource('product',ProductController::class);
 
-Route::resource('category',CategoryController::class);
+Route::resource('category',CategoryController::class)->middleware('auth');
 
 Route::resource('user',UserController::class);
 
