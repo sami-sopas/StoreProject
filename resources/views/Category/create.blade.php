@@ -13,7 +13,7 @@
             <br>
             <!--Redirección hacia otras páginas-->
             <div class="divRedirects" id="divRedirectPC">
-                <h2 class="headerRedirects"><a href="/">Página principal</a>    &nbsp;|&nbsp;   <a href="{{ route('category.index') }}">Ver lista de categorías</a></h2>
+                <h2 class="headerRedirects"><a href="/" class="btn btn-info" role="button">Página principal</a>    &nbsp;|&nbsp;   <a href="{{ route('category.index') }}" class="btn btn-info" role="button"   >Ver lista de categorías</a></h2>
                 <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
             </div>     <!--divRedirect end-->
 
@@ -45,7 +45,7 @@
                     </div>  <!--divInput end-->
                         <br>
                     <div class="divButtons" id="divButtonP1">
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="btn btn-danger">Enviar</button>
                     </div>  <!--divButton end-->
                 </form>
             </div>  <!--divForm end-->

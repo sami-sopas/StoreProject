@@ -13,7 +13,7 @@
             <div class="divMains" id="divMainShowP">
                 <br>
                 <div class="divRedirects" id="divRedirectPS">
-                    <h2 class="headerRedirect"><a href="{{ route('category.index') }}">Regresar a categorías</a></h2>
+                    <h2 class="headerRedirect"><a href="{{ route('category.index') }}" class="btn btn-primary" role="button">Regresar a categorías</a></h2>
                     <!--<h2 class="headerRedirects"><a href="/">Página principal</a></h2>-->
                 </div><!--divRedirects end-->
                 <br>
@@ -33,7 +33,7 @@
                 </div>
                 <br>
                 @auth    
-                <h2><a href="{{route('category.edit',$category->id)}}">Editar {{$category->name}}</a></h2>
+                <h2><a href="{{route('category.edit',$category->id)}}" class="btn btn-info" role="button">Editar {{$category->name}}</a></h2>
                 @endauth
             </div><!--divMain end-->
         </main>
