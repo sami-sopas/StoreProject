@@ -65,6 +65,12 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'description'=>'required'
+        ]);
+
         $category->name = $request->name;
         $category->description = $request->description;
 

@@ -9,6 +9,16 @@
                 <!--<h2 class="headerRedirects"></h2>-->
              </div>     <!--divRedirect end-->
 
+             @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
             <!-- Titulo de la forma o algo así, centrado-->
             <div class="divForms" id="divFormPE">
                 <form action="{{ route('category.update',$category) }}" method="POST">
@@ -22,8 +32,8 @@
                     </div>  <!--divInput end-->
                         <br>
                     <div class="divInputs" id="divInputPE2">
-                        <label for="category">Descripción:
-                        <input type="text" name="category" id="" value="{{$category->description}}">
+                        <label for="description">Descripción:
+                        <input type="text" name="description" id="" value="{{$category->description}}">
                         </label>
                     </div>  <!--divInput end-->
                         <br>

@@ -44,14 +44,16 @@ class ProductController extends Controller
             'description'=>'required'
         ]);
 
-        $product = new Product();
-        $product->name = $request->name;
-        $product->category_id = $request->category_id;
-        $product->price = $request->price;
-        $product->existance = $request->existance;
-        $product->description = $request->description;
+        Product::create($request->all());
 
-        $product->save();
+        // $product = new Product();
+        // $product->name = $request->name;
+        // $product->category_id = $request->category_id;
+        // $product->price = $request->price;
+        // $product->existance = $request->existance;
+        // $product->description = $request->description;
+
+        // $product->save();
 
         return redirect('product');
     }
@@ -81,6 +83,18 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        $request->validate([
+            'name' => 'required',
+            'price'=>'required',
+            'existance'=>'required',
+            'description'=>'required'
+        ]);
+
+
+        //Simplificando ando
+        // Product::where('id',$product->id)
+        //     ->update($request->except('_token','_method'));
+
         $product->name = $request->name;
         $product->category_id = $request->category;
         $product->price = $request->price;

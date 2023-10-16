@@ -25,7 +25,16 @@
                 <h2 class="headerRedirects" style="text-align: end"><a href="{{ route('product.index') }}" class="btn btn-info" role="button">Regresar a productos</a> &nbsp;|&nbsp; <a href="{{ route('product.show',$product->id) }}" class="btn btn-info" role="button">Regresar a {{$product->name}}</a></h2>
                 <!--<h2 class="headerRedirects"></h2>-->
              </div>     <!--divRedirect end-->
-
+             
+             @if ($errors->any())
+             <div class="alert alert-danger">
+                 <ul>
+                     @foreach ($errors->all() as $error)
+                         <li>{{ $error }}</li>
+                     @endforeach
+                 </ul>
+             </div>
+         @endif
             <!-- Titulo de la forma o algo así, centrado-->
             <div class="divForms" id="divFormPE">
                 <form action="{{ route('product.update',$product) }}" method="POST">
