@@ -21,6 +21,16 @@
                     <h2>Nombre de la categoría - {{$category->name}}</h2>
                     <h2>Descripción - {{$category->description}}</h2>
                 </div>
+                <div class="divLists" style="margin-top: 50px">
+                    <h4>Productos de esta categoria</h4>
+                    <ul>
+                        @foreach($category->products as $product)
+                        <li>
+                            {{$product->name}}
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
                 <br>
                 @auth    
                 <h2><a href="{{route('category.edit',$category->id)}}">Editar {{$category->name}}</a></h2>

@@ -20,7 +20,7 @@
                             <form action="{{ route('product.destroy',$product) }}" method="POST">
                                 @csrf 
                                 @method('DELETE')
-                                <button type="submit">Eliminar</button>
+                                <button type="submit" class="btn btn-danger" >Eliminar</button>
                             </form>
                             @endauth
                             <br>
