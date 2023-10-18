@@ -8,6 +8,10 @@
                 <div class="divLists" id="divList1">
     
                 <h1 class="titleh2">Productos</h1>
+
+                <x-alerta>
+                    HOLA INDEX PRODUCTOS
+                </x-alerta>
                 <br>
                 @auth    
                 <h2><a href="{{ route('product.create') }}" class="btn btn-primary" role="button">Crear producto</a></h2>
@@ -16,6 +20,7 @@
                     @foreach ($products as $product)
                         <div class="divProducts">
                             <h2>Nombre del producto: {{$product->name}} <h2>
+                                 <h2>Usuario: {{$product->user->name}} <h2>
                                 <div style="margin-top:-40px;text-align: right;">
                                 <a href="{{ route('product.show',$product->id) }}" class="btn btn-info" role="button">Ver detalles</a>
                                 

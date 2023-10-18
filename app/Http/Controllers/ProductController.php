@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -53,6 +54,9 @@ class ProductController extends Controller
             'description'=>'required'
         ]);
 
+        //Inyectar el user id
+        $request->merge(['user_id' => Auth::id()]);
+
         Product::create($request->all());
 
         // $product = new Product();
@@ -61,7 +65,8 @@ class ProductController extends Controller
         // $product->price = $request->price;
         // $product->existance = $request->existance;
         // $product->description = $request->description;
-
+        // $product->user_id = Auth::id();
+ 
         // $product->save();
 
         return redirect('product');

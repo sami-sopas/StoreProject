@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -26,6 +27,7 @@ class ProductFactory extends Factory
             'existance' => $this->faker->numberBetween(0, 20),
             'description' => $this->faker->word(),
             'category_id' => $category->id,
+            'user_id' => User::factory(),
         ];
     }
 }
