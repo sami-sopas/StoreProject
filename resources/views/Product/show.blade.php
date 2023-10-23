@@ -31,6 +31,12 @@
                 <h2>Precio - {{$product->price}}</h2>
                 <h2>Existencia - {{$product->existance}}</h2>
                 <h2>Descripción - {{$product->description}}</h2>
+
+                <ul>Colores: 
+                    @foreach ($product->colors as $color)
+                        <li>{{ $color->name }}</li>
+                    @endforeach
+                </ul>
             </div>
             <br>
             @auth    

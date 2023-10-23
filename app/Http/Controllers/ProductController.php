@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Color;
 
 class ProductController extends Controller
 {
@@ -36,8 +37,9 @@ class ProductController extends Controller
         //vista con form creacion
 
         $categories = Category::all();
+        $colors = Color::all();
 
-        return view ('Product.create',compact('categories'));
+        return view ('Product.create',compact('categories','colors'));
     }
 
     /**
@@ -46,7 +48,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $product = $request->validate([
+        $request->validate([
             'name' => 'required',
             'category_id' => 'required',
             'price'=>'required',
@@ -58,6 +60,9 @@ class ProductController extends Controller
         $request->merge(['user_id' => Auth::id()]);
 
         $product = Product::create($request->all());
+
+        //Pal de n:n    
+        $product->colors()->attach($request->color_id);
 
         //$product->colors()->attatch($request->color_id);  y después usamos el seeder
 
@@ -71,7 +76,7 @@ class ProductController extends Controller
  
         // $product->save();
 
-        return redirect('product');
+        return redirect()->route('product.index');
     }
 
     /**
