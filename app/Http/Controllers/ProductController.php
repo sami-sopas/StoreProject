@@ -57,7 +57,9 @@ class ProductController extends Controller
         //Inyectar el user id
         $request->merge(['user_id' => Auth::id()]);
 
-        Product::create($request->all());
+        $product = Product::create($request->all());
+
+        //$product->colors()->attatch($request->color_id);  y después usamos el seeder
 
         // $product = new Product();
         // $product->name = $request->name;
