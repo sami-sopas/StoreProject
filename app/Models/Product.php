@@ -2,15 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use App\Models\Category;
 use App\Models\Color;
+use App\Models\Category;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
     use HasFactory;
-
+    use SoftDeletes;
+    
     //Columnas llenables por el usuario
     protected $fillable = ['name','category_id','price','existance','description','user_id'];
 

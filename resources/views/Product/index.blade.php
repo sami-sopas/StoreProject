@@ -24,12 +24,14 @@
                                 <div style="margin-top:-40px;text-align: right;">
                                 <a href="{{ route('product.show',$product->id) }}" class="btn btn-info" role="button">Ver detalles</a>
                                 
-                            @auth    
+                            @auth
+                            @can('delete',$product)    
                             <form action="{{ route('product.destroy',$product) }}" method="POST">
                                 @csrf 
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Eliminar</button>
                             </form>
+                            @endcan
                             @endauth
                                 </div> 
                         </div>  <!--productDiv end-->

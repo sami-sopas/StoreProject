@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class ProductController extends Controller
 {
@@ -89,6 +90,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        if(!Gate::allows('admin-product',$product)) {
+            return abort(403);
+        }
+
         $categories = Category::all();
 
         return view('Product.edit',compact(['product','categories']));
@@ -99,6 +104,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        if(!Gate::allows('admin-product',$product)) {
+            return abort(403);
+        }
+
         $request->validate([
             'name' => 'required',
             'price'=>'required',
@@ -126,9 +135,13 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(Request $request,Product $product)
     {
-        //
+        // if ($request->user()->cannot('create', Post::class)) {
+        //     abort(403);
+        // }
+
+        $this->authorize('delete',$product);
         $product->delete();
         return redirect()->route('product.index'); 
     }
