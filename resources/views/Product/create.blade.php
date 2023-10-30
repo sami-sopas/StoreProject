@@ -79,6 +79,16 @@
                         </div>  <!--divInput end-->
                         <br>
 
+                        <!-- Colores carajo -->
+                        <label for="color_id[]">Colores</label>
+                        <select name="color_id[]" multiple>
+                            @foreach ($colors as $color)
+                                <option value="{{ $color->id }}" @selected( array_search($color->id, old('color_id') ?? []) !== false )>
+                                    {{ $color->name }}
+                                </option>
+                            @endforeach
+                        </select>
+
                     <div class="divButtons" id="divButtonP1">
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </div>  <!--divButton end-->

@@ -9,9 +9,9 @@ class Color extends Model
 {
     use HasFactory;
 
-    private $table = 'colors';
+    protected $table = 'colors';
 
-    protected $timestamps = false;
+    public $timestamps = false;
 
     public function products()
     {
