@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ProductoCreado;
+use App\Models\Color;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Mail;
 
 class ProductController extends Controller
 {
@@ -23,7 +27,11 @@ class ProductController extends Controller
 
     public function index()
     {
-        $products = Product::all();
+        //Eager loading
+        $products = Product::with('user')->get(); //Product::all();
+
+        //Otra forma $products = Product::with('user:id,name')->with(requerimientos)->get();
+    
 
         return view('Product.index',compact('products'));
     }
@@ -74,6 +82,8 @@ class ProductController extends Controller
         // $product->user_id = Auth::id();
  
         // $product->save();
+
+        Mail::to($request->user())->send(new ProductoCreado($product));
 
         return redirect()->route('product.index');
     }
